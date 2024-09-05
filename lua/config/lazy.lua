@@ -13,7 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
+vim.opt.shell = os.getenv("NVIM_SHELL")
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins

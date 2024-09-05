@@ -7,7 +7,7 @@ return {
     require('codestats').setup {
       username = 'DaniloJakob',  -- needed to fetch profile data
       base_url = 'https://codestats.net',  -- codestats.net base url
-      api_key = 'SFMyNTY.UkdGdWFXeHZTbUZyYjJJPSMjTmpJek1BPT0.X70YadVmp4vVNmWLp0yUFLGhC57kiqB-qklEXs3DGy8',
+      api_key = os.getenv("CODESTATS_API_KEY"),  -- codestats.net base url
       send_on_exit = true,  -- send xp on nvim exit
       send_on_timer = true,  -- send xp on timer
       timer_interval = 60000,  -- timer interval in milliseconds (minimum 1000ms to prevent DDoSing codestat.net servers)
